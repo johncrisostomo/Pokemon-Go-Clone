@@ -14,6 +14,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var manager = CLLocationManager()
     
+    var updateCount = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,9 +25,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             print("Ready to go!")
             mapView.showsUserLocation = true
+            
+            manager.startUpdatingLocation()
         } else {
             manager.requestWhenInUseAuthorization()
         }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if updateCount < 3 {
+            let region = MKCoordinateRegionMakeWithDistance(manager.location!.coordinate, 1000, 1000)
+            
+            mapView.setRegion(region, animated: false)
+            
+            updateCount += 1
+        }
+
     }
 }
 
