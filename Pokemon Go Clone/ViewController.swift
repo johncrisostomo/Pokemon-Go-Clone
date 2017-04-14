@@ -18,7 +18,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         manager.delegate = self
         
@@ -35,13 +34,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         if updateCount < 3 {
-            let region = MKCoordinateRegionMakeWithDistance(manager.location!.coordinate, 1000, 1000)
+            let region = MKCoordinateRegionMakeWithDistance(manager.location!.coordinate, 400, 400)
             
             mapView.setRegion(region, animated: false)
             
             updateCount += 1
+        } else {
+            manager.stopUpdatingLocation()
         }
-
+    }
+    
+    @IBAction func centerTapped(_ sender: Any) {
+        if let coord = manager.location?.coordinate {
+            let region = MKCoordinateRegionMakeWithDistance(coord, 400, 400)
+        
+            mapView.setRegion(region, animated: true)
+        }
     }
 }
 
