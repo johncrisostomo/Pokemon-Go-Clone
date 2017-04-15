@@ -67,5 +67,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             mapView.setRegion(region, animated: true)
         }
     }
+    
+    @IBAction func pokeballTapped(_ sender: Any) {
+        
+    }
 }
 

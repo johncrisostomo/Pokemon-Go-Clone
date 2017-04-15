@@ -14,6 +14,7 @@
 		193024341EA037BC00D8F856 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 193024331EA037BC00D8F856 /* Assets.xcassets */; };
 		193024371EA037BC00D8F856 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 193024351EA037BC00D8F856 /* LaunchScreen.storyboard */; };
 		193024401EA038C700D8F856 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1930243F1EA038C700D8F856 /* MapKit.framework */; };
+		19FBBE4E1EA2D175004E5D79 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FBBE4D1EA2D175004E5D79 /* PokedexViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		193024361EA037BC00D8F856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		193024381EA037BC00D8F856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1930243F1EA038C700D8F856 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		19FBBE4D1EA2D175004E5D79 /* PokedexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				193024291EA037BC00D8F856 /* AppDelegate.swift */,
 				1930242B1EA037BC00D8F856 /* ViewController.swift */,
+				19FBBE4D1EA2D175004E5D79 /* PokedexViewController.swift */,
 				1930242D1EA037BC00D8F856 /* Main.storyboard */,
 				193024331EA037BC00D8F856 /* Assets.xcassets */,
 				193024351EA037BC00D8F856 /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1930242C1EA037BC00D8F856 /* ViewController.swift in Sources */,
+				19FBBE4E1EA2D175004E5D79 /* PokedexViewController.swift in Sources */,
 				193024321EA037BC00D8F856 /* Pokemon_Go_Clone.xcdatamodeld in Sources */,
 				1930242A1EA037BC00D8F856 /* AppDelegate.swift in Sources */,
 			);
@@ -318,6 +322,7 @@
 				1930243D1EA037BC00D8F856 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
