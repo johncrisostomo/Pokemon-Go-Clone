@@ -16,10 +16,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var updateCount = 0
     
+    var pokemons: [Pokemon] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         manager.delegate = self
+        
+        pokemons = getAllPokemon()
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             print("Ready to go!")
