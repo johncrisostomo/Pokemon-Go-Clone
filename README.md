@@ -1,7 +1,11 @@
 # A simple Pokemon Go clone
 
-Playing around with MapKit and Core Data. This app just to practice iOS development. No copyright violation was intended.
-There are also a lot of code duplication in this project. I've done that in purpose to help my muscle memory get used to Swift/UIKit.
+Playing around with MapKit and Core Data. This app just to practice iOS development. 
+
+No copyright violation was intended.
+
+There are also a lot of code duplication in this project. I've done that on purpose to help my muscle memory get used to Swift/UIKit.
+
 Images are from [RoundIcons Freebies](http://www.flaticon.com/packs/pokemon-go)
 
 ![screenshot1](https://github.com/johncrisostomo/Pokemon-Go-Clone/blob/master/screenshots/ss1.png)
