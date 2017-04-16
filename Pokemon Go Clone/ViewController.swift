@@ -35,8 +35,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { (timer) in
                 
                 if let coords = self.manager.location?.coordinate {
-                    let annotation = MKPointAnnotation()
-                    annotation.coordinate = coords
+                    let pokemon = self.pokemons[Int(arc4random_uniform(UInt32(self.pokemons.count)))]
+                    
+                    let annotation = PokeAnnotation(coord: coords, pokemon: pokemon)
+                    
                     let randomLon = (Double(arc4random_uniform(200)) - 100.0) / 50000.0
                     let randomLat = (Double(arc4random_uniform(200)) - 100.0) / 50000.0
                     
@@ -65,7 +67,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: nil)
         
-        annotationView.image = UIImage(named: "dratini")
+        let pokemon = (annotation as! PokeAnnotation).pokemon
+        
+        annotationView.image = UIImage(named: pokemon.imageName!)
         
         var frame = annotationView.frame
         

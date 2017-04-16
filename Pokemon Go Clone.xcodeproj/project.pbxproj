@@ -16,6 +16,7 @@
 		193024401EA038C700D8F856 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1930243F1EA038C700D8F856 /* MapKit.framework */; };
 		19FBBE4E1EA2D175004E5D79 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FBBE4D1EA2D175004E5D79 /* PokedexViewController.swift */; };
 		19FBBE501EA2D9E2004E5D79 /* CoreDataHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FBBE4F1EA2D9E2004E5D79 /* CoreDataHelp.swift */; };
+		19FBBE521EA2FF48004E5D79 /* PokeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FBBE511EA2FF48004E5D79 /* PokeAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1930243F1EA038C700D8F856 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		19FBBE4D1EA2D175004E5D79 /* PokedexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
 		19FBBE4F1EA2D9E2004E5D79 /* CoreDataHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelp.swift; sourceTree = "<group>"; };
+		19FBBE511EA2FF48004E5D79 /* PokeAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				193024381EA037BC00D8F856 /* Info.plist */,
 				193024301EA037BC00D8F856 /* Pokemon_Go_Clone.xcdatamodeld */,
 				19FBBE4F1EA2D9E2004E5D79 /* CoreDataHelp.swift */,
+				19FBBE511EA2FF48004E5D79 /* PokeAnnotation.swift */,
 			);
 			path = "Pokemon Go Clone";
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1930242C1EA037BC00D8F856 /* ViewController.swift in Sources */,
+				19FBBE521EA2FF48004E5D79 /* PokeAnnotation.swift in Sources */,
 				19FBBE4E1EA2D175004E5D79 /* PokedexViewController.swift in Sources */,
 				193024321EA037BC00D8F856 /* Pokemon_Go_Clone.xcdatamodeld in Sources */,
 				19FBBE501EA2D9E2004E5D79 /* CoreDataHelp.swift in Sources */,
