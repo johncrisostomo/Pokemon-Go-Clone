@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     
     var manager = CLLocationManager()
@@ -26,7 +26,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         pokemons = getAllPokemon()
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-            print("Ready to go!")
+            mapView.delegate = self
+            
             mapView.showsUserLocation = true
             
             manager.startUpdatingLocation()
@@ -49,6 +50,31 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         } else {
             manager.requestWhenInUseAuthorization()
         }
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            let userAnnotation = MKAnnotationView(annotation: annotation, reuseIdentifier: nil)
+            userAnnotation.image = UIImage(named: "player")
+            
+            userAnnotation.frame.size.height = 50
+            userAnnotation.frame.size.width = 50
+            
+            return userAnnotation
+        }
+        
+        let annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: nil)
+        
+        annotationView.image = UIImage(named: "dratini")
+        
+        var frame = annotationView.frame
+        
+        frame.size.height = 50
+        frame.size.width = 50
+        
+        annotationView.frame = frame
+        
+        return annotationView
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
